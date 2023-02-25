@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VR Scene Sky/Plane</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Plane -->
+      <a-plane
+        color="rgb(200, 90, 15)"
+        height="1000"
+        width="1000"
+        position="0 0 -4"
+        rotation="-90 0 0"
+        metalness="0.75"
+      ></a-plane>
+
+      <!-- Sky -->
+      <a-sky color="#add8e6"></a-sky>
+    </a-scene>
+  </body>
+</html>
