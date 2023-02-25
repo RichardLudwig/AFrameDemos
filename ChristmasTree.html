@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!--    Christmas Tree    -->
+      <a-cone></a-cone>
+      <a-cylinder></a-cylinder>
+    </a-scene>
+    <script>
+      $ = (query) => document.querySelector(query);
+
+      const updateTree = () => {
+        $('a-cone').setAttribute('position', '0 3 -3');
+        $('a-cone').setAttribute('color', 'green');
+        $('a-cone').setAttribute('height', '5');
+        $('a-cylinder').setAttribute('position', '0 0 -3');
+        $('a-cylinder').setAttribute('color', '#6A4325');
+        $('a-cylinder').setAttribute('radius', '0.5');
+
+        return requestAnimationFrame(updateTree);
+      };
+
+      requestAnimationFrame(updateTree);
+    </script>
+  </body>
+</html>
